@@ -211,3 +211,63 @@ main {
     border-radius: 5px;
     padding: 10px;
 }
+
+/* Styling for Task Dependencies Section */
+.task-dependencies {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.task-dependencies h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.task-dependencies ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-dependencies li {
+    margin-bottom: 10px;
+}
+
+/* Styling for Task Dependency Labels and Select Boxes */
+.task-dependencies label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.task-dependencies select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Styling for Add More Task Dependencies Button */
+.add-dependency-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-dependency-button:hover {
+    background-color: #0056b3;
+}
+
+

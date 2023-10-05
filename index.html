@@ -56,6 +56,31 @@
             </form>
         </section>
 
+        <!-- HTML for Task Dependencies -->
+<section class="task-dependencies">
+    <h3>Task Dependencies</h3>
+    <ul>
+        <li>
+            <label for="task1">Task 1</label>
+            <select id="task1">
+                <!-- List of tasks to choose from -->
+            </select>
+            <select id="dependencyType">
+                <option value="SS">Start-to-Start</option>
+                <option value="SF">Start-to-Finish</option>
+                <option value="FS">Finish-to-Start</option>
+                <option value="FF">Finish-to-Finish</option>
+            </select>
+            <label for="task2">Task 2</label>
+            <select id="task2">
+                <!-- List of tasks to choose from -->
+            </select>
+        </li>
+        <!-- Allow users to add more task dependencies -->
+    </ul>
+</section>
+
+
         <!-- Other Dashboard Widgets and Sections -->
         <section class="dashboard-widgets">
             <!-- Analytics Charts -->
@@ -121,6 +146,14 @@
                 <div id="calendar"></div>
             </section>
         </section>
+
+
+        
+        <!-- HTML for the CSV Export Button -->
+<button id="csvExportButton">Export CSV</button>
+
+
+
     </main>
 
     <!-- Footer -->
@@ -234,5 +267,16 @@
             });
         });
     </script>
+
+    <!-- JavaScript to Trigger CSV Export -->
+<script>
+    document.getElementById('csvExportButton').addEventListener('click', function () {
+        // Send a request to the server to trigger CSV export
+        // The server should respond with a download link
+        window.location.href = '/export-csv';
+    });
+</script>
+
+    
 </body>
 </html>

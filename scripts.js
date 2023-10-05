@@ -50,4 +50,61 @@ addButton.addEventListener('click', () => {
     }
 });
 
+const createCsvWriter = require('csv-writer').createObjectCsvWriter;
+
+// Define the fields and create a CSV writer
+const csvWriter = createCsvWriter({
+    path: 'exported_data.csv',
+    header: [
+        { id: 'taskName', title: 'Task Name' },
+        { id: 'dueDate', title: 'Due Date' },
+        // Add more fields as needed
+    ]
+});
+
+// Example data (replace with your data retrieval logic)
+const data = [
+    { taskName: 'Task 1', dueDate: '2023-10-10' },
+    { taskName: 'Task 2', dueDate: '2023-11-05' },
+    // Add more data rows
+];
+
+// Write the data to the CSV file
+csvWriter.writeRecords(data)
+    .then(() => console.log('CSV file written successfully'));
+
+    const fs = require('fs');
+const PDFDocument = require('pdfkit');
+
+// Create a new PDF document
+const doc = new PDFDocument();
+const pdfStream = fs.createWriteStream('exported_data.pdf');
+
+// Example data (replace with your data retrieval logic)
+const data = [
+    { taskName: 'Task 1', dueDate: '2023-10-10' },
+    { taskName: 'Task 2', dueDate: '2023-11-05' },
+    // Add more data rows
+];
+
+// Pipe the PDF document to a writable stream
+doc.pipe(pdfStream);
+
+// Add content to the PDF
+doc.fontSize(14).text('Task Data Export', { align: 'center' });
+
+// Loop through data and add it to the PDF
+data.forEach((item) => {
+    doc.fontSize(12).text(`Task Name: ${item.taskName}`);
+    doc.fontSize(12).text(`Due Date: ${item.dueDate}`);
+    doc.moveDown();
+});
+
+// Finalize the PDF
+doc.end();
+
+pdfStream.on('finish', () => {
+    console.log('PDF file written successfully');
+});
+
 // Additional JavaScript code can be added as needed for dynamic behavior
