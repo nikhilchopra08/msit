@@ -1,0 +1,147 @@
+/* Reset some default styles to ensure consistency */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the entire page */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Bar styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Main Content Area styles */
+main {
+    padding: 2rem;
+}
+
+.welcome {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-list {
+    margin-top: 2rem;
+}
+
+.task-list h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.task-list ul {
+    list-style: none;
+}
+
+.task-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Dashboard Widgets and Sections styles */
+.dashboard-widgets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.widget {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+}
+
+.widget h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Task Adding Section styles */
+.task-add {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.task-add h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#taskForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#taskInput {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1rem;
+    outline: none;
+}
+
+#addTaskButton {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addTaskButton:hover {
+    background-color: #0056b3;
+}
+
+/* Additional styling can be added as needed */
