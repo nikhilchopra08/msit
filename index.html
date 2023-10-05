@@ -48,48 +48,79 @@
         </section>
 
         <!-- Task Adding Section -->
-<section class="task-add">
-    <h3>Add a New Task</h3>
-    <form id="taskForm">
-        <input type="text" id="taskInput" placeholder="Enter your task" required>
-        <button type="submit" id="addTaskButton">Add Task</button>
-    </form>
-</section>
+        <section class="task-add">
+            <h3>Add a New Task</h3>
+            <form id="taskForm">
+                <input type="text" id="taskInput" placeholder="Enter your task" required>
+                <button type="submit" id="addTaskButton">Add Task</button>
+            </form>
+        </section>
 
+        <!-- Other Dashboard Widgets and Sections -->
+        <section class="dashboard-widgets">
+            <!-- Analytics Charts -->
+            <div class="widget analytics-widget">
+                <h3>Analytics</h3>
+                <!-- Include charts or graphs using a charting library like Chart.js or D3.js -->
+                <canvas id="analyticsChart" width="400" height="200"></canvas>
+            </div>
 
-<!-- Other Dashboard Widgets and Sections -->
-<section class="dashboard-widgets">
-    <!-- Analytics Charts -->
-    <div class="widget analytics-widget">
-        <h3>Analytics</h3>
-        <!-- Include charts or graphs using a charting library like Chart.js or D3.js -->
-        <canvas id="analyticsChart" width="400" height="200"></canvas>
-    </div>
+            <!-- Recent Activity -->
+            <div class="widget recent-activity-widget">
+                <h3>Recent Activity</h3>
+                <ul>
+                    <li>User A completed Task X</li>
+                    <li>User B updated Project Y</li>
+                    <li>User C added a new task</li>
+                </ul>
+            </div>
 
-    <!-- Recent Activity -->
-    <div class="widget recent-activity-widget">
-        <h3>Recent Activity</h3>
-        <ul>
-            <li>User A completed Task X</li>
-            <li>User B updated Project Y</li>
-            <li>User C added a new task</li>
-        </ul>
-    </div>
+            <!-- Notifications -->
+            <div class="widget notifications-widget">
+                <h3>Notifications</h3>
+                <ul>
+                    <li><span class="notification">New message from User D</span></li>
+                    <li><span class="notification">Task Z is due today</span></li>
+                    <!-- Add more notifications dynamically here -->
+                </ul>
+            </div>
 
-    <!-- Notifications -->
-    <div class="widget notifications-widget">
-        <h3>Notifications</h3>
-        <ul>
-            <li><span class="notification">New message from User D</span></li>
-            <li><span class="notification">Task Z is due today</span></li>
-            <!-- Add more notifications dynamically here -->
-        </ul>
-    </div>
+            <!-- Upcoming Events Section -->
+            <section class="upcoming-events">
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li>Event 1 - October 10, 2023</li>
+                    <li>Event 2 - November 5, 2023</li>
+                    <li>Event 3 - December 15, 2023</li>
+                </ul>
+            </section>
 
-    <!-- Additional Widgets and Sections -->
-    <!-- You can add more widgets and sections as needed -->
-</section>
+            <!-- Event Adding Form -->
+            <section class="event-add">
+                <h3>Add an Event</h3>
+                <form id="eventForm">
+                    <input type="text" id="eventTitle" placeholder="Event Title" required>
+                    <input type="date" id="eventDate" required>
+                    <button type="submit" id="addEventButton">Add Event</button>
+                </form>
+            </section>
 
+            <!-- Project Status Section -->
+            <section class="project-status">
+                <h3>Project Status</h3>
+                <ul>
+                    <li>Project Alpha - In Progress</li>
+                    <li>Project Beta - Completed</li>
+                    <li>Project Gamma - Pending</li>
+                </ul>
+            </section>
+
+            <!-- Calendar Section -->
+            <section class="calendar">
+                <h3>Calendar</h3>
+                <div id="calendar"></div>
+            </section>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -100,38 +131,108 @@
     <!-- Include JavaScript files if needed -->
     <script src="scripts.js"></script>
     <!-- Include Chart.js library -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<!-- JavaScript code to create and render the chart -->
-<script>
-    // Sample data for the chart (replace with your data)
-    var chartData = {
-        labels: ["January", "February", "March", "April", "May"],
-        datasets: [{
-            label: "Monthly Sales",
-            data: [50, 60, 70, 65, 80],
-            backgroundColor: "rgba(75, 192, 192, 0.2)",
-            borderColor: "rgba(75, 192, 192, 1)",
-            borderWidth: 1,
-        }],
-    };
+    <!-- JavaScript code to create and render the chart -->
+    <script>
+        // Sample data for the chart (replace with your data)
+        var chartData = {
+            labels: ["January", "February", "March", "April", "May"],
+            datasets: [{
+                label: "Monthly Sales",
+                data: [50, 60, 70, 65, 80],
+                backgroundColor: "rgba(75, 192, 192, 0.2)",
+                borderColor: "rgba(75, 192, 192, 1)",
+                borderWidth: 1,
+            }],
+        };
 
-    // Get the canvas element
-    var ctx = document.getElementById('analyticsChart').getContext('2d');
+        // Get the canvas element
+        var ctx = document.getElementById('analyticsChart').getContext('2d');
 
-    // Create a chart
-    var myChart = new Chart(ctx, {
-        type: 'bar', // You can choose different chart types (e.g., 'line', 'pie', 'doughnut', etc.)
-        data: chartData,
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true,
+        // Create a chart
+        var myChart = new Chart(ctx, {
+            type: 'bar', // You can choose different chart types (e.g., 'line', 'pie', 'doughnut', etc.)
+            data: chartData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
                 },
             },
-        },
-    });
-</script>
+        });
+    </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.min.css">
+
+    <!-- JavaScript code to initialize the calendar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                // Specify your calendar options here
+                initialView: 'dayGridMonth', // or 'timeGridWeek', 'timeGridDay', etc.
+                events: [
+                    {
+                        title: 'Event 1',
+                        start: '2023-10-10',
+                        end: '2023-10-10'
+                    },
+                    {
+                        title: 'Event 2',
+                        start: '2023-11-05',
+                        end: '2023-11-05'
+                    },
+                    {
+                        title: 'Event 3',
+                        start: '2023-12-15',
+                        end: '2023-12-15'
+                    }
+                    // Add more events here
+                ]
+            });
+
+            calendar.render();
+        });
+    </script>
+
+    <!-- JavaScript code to handle event form submission -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize the calendar
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                // Specify your calendar options here
+                initialView: 'dayGridMonth',
+            });
+
+            // Render the calendar
+            calendar.render();
+
+            // Event form submission handling
+            var eventForm = document.getElementById('eventForm');
+            eventForm.addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent the form from submitting
+
+                // Get event title and date from the form
+                var eventTitle = document.getElementById('eventTitle').value;
+                var eventDate = document.getElementById('eventDate').value;
+
+                // Check if the event title and date are provided
+                if (eventTitle && eventDate) {
+                    // Add the event to the calendar
+                    calendar.addEvent({
+                        title: eventTitle,
+                        start: eventDate,
+                    });
+
+                    // Clear the form
+                    eventForm.reset();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

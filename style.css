@@ -113,3 +113,101 @@ main {
 #addTaskButton:hover {
     background-color: #0056b3;
 }
+
+/* Calendar Section Styles */
+.calendar {
+    background-color: #f5f5f5; /* Background color for the calendar section */
+    padding: 20px;
+    border: 1px solid #ddd; /* Border to separate the calendar section */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+    margin-bottom: 20px; /* Add some space below the calendar section */
+}
+
+.calendar h3 {
+    color: #333; /* Heading text color */
+    font-size: 20px; /* Heading font size */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Style the FullCalendar container (the 'calendar' div) */
+#calendar {
+    background-color: #fff; /* Background color for the calendar itself */
+    border: 1px solid #ddd; /* Border around the calendar */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+/* Upcoming Events Section Styles */
+.upcoming-events {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.upcoming-events h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.upcoming-events ul {
+    list-style: none;
+    padding: 0;
+}
+
+.upcoming-events li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Project Status Section Styles */
+.project-status {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.project-status h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project-status ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-status li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Calendar Section Styles */
+.calendar {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.calendar h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Style the FullCalendar container (the 'calendar' div) */
+#calendar {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
